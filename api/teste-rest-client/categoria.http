@@ -1,0 +1,23 @@
+@URL = http://localhost/CC3DeCria/api
+
+GET {{URL}}/categoria/get.php
+
+###Criar categoria
+POST {{URL}}/categoria/create.php
+Content-Type: application/json
+
+{
+    "nome": "teste novo aula"
+}
+
+### Atualizar usuario
+POST {{URL}}/categoria/update.php?id_categoria=11
+Content-Type: application/json
+
+{
+    "nome": "novo teste aula"
+}
+
+###Deletar usuario
+GET {{URL}}/categoria/delete.php?id_categoria=11
+

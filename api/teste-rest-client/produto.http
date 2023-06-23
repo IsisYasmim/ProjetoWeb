@@ -1,0 +1,29 @@
+@URL = http://localhost/CC3DeCria/api
+
+GET {{URL}}/produto/get.php
+
+###Criar produto
+POST {{URL}}/produto/create.php
+Content-Type: application/json
+
+{
+    "nome": "teste aula",
+    "descricao": "produto lixoso",
+    "preco": 2,
+    "quantidade": 10
+}
+
+### Atualizar produto
+POST {{URL}}/produto/update.php?id_produto=1
+Content-Type: application/json
+
+{
+    "nome": "ssdhasudhasu",
+    "descricao": "ADASDAS DADSA",
+    "preco": "1",
+    "quantidade": "1"
+}
+
+###Deletar produto
+GET {{URL}}/produto/delete.php?id_produto=1
+

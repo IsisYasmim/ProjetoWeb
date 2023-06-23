@@ -1,0 +1,31 @@
+@URL = http://localhost/CC3DeCria/api
+
+GET {{URL}}/usuario/get.php
+
+###Criar usuario
+POST {{URL}}/usuario/create.php
+Content-Type: application/json
+
+{
+    "nome": "gabriel",
+    "email": "gabriel@gabriel.com",
+    "data_nascimento": "1998-10-22",
+    "senha": "gabriel123",
+    "admin": 1
+}
+
+### Atualizar usuario
+POST {{URL}}/usuario/update.php?id_usuario=7
+Content-Type: application/json
+
+{
+    "nome": "atualizacao gabrel",
+    "email": "att@att.com",
+    "data_nascimento": "2002-06-05",
+    "senha": "att teste",
+    "admin": 0
+}
+
+###Deletar usuario
+GET {{URL}}/usuario/delete.php?id_usuario=7
+
