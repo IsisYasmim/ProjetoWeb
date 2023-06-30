@@ -1,0 +1,9 @@
+### Produtos
+@URL=http://localhost/CC3DeCria/auth
+
+POST {{URL}}/produto/create.php
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiJ9.7dd2ymtRgBBL-AiT7BnwLdsOjAE8pk-7Esk9EUpvkQs
+
+{
+    "descricao": "Relógio"
+}

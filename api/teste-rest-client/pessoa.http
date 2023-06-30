@@ -1,0 +1,30 @@
+@URL = http://localhost/CC3DeCria/api
+
+GET {{URL}}/pessoa/get.php
+
+###Criar Pessoa
+POST {{URL}}/pessoa/create.php
+Content-Type: application/json
+
+{
+    "nome": "Abubububle",
+    "telefone": "4542424444",
+    "email": "abuble@a.com",
+    "nascimento": "2002-06-05",
+    "senha": "12345"
+}
+
+### Atualizar pessoa
+POST {{URL}}/pessoa/update.php?id=10
+Content-Type: application/json
+
+{
+    "nome": "Isis a mais linda",
+    "telefone": "4544444444",
+    "email": "isis@a.com",
+    "nascimento": "2002-05-05"
+  }
+
+###Deletar pessoa
+GET {{URL}}/pessoa/delete.php?id=8
+

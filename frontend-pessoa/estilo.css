@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #5C3440;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #5C3440;
+}
+
+h4 {
+    font-size: 20px;
+    color: #5C3440;
+}
+
+h6{
+    font-weight: 700px;
+    font-size: 16px;
+}
+
+p {
+    font-size: 16px;
+    color: #5C5053;
+    margin: 15px 0 20px 0;
+    font-weight: 600;
+}
+
+.secao-p1 {
+    padding: 40px 80px;
+}
+
+.secao-m1 {
+    margin: 40px 0;
+}
+
+body {
+    width: 100%;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E1C4CD;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#naveg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#naveg li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#naveg li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#naveg a:hover,
+#naveg a.ativo {
+    color: #DB7D99;
+}
+
+#categorias {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#categorias .caixa{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.16);
+    border: 1px solid #E1C4CD;
+    border-radius: 4px;
+    margin: 15px 0;
+}
+
+#categorias .caixa:hover{
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.1);
+}
+#categorias .caixa img {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#categorias .caixa h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #A85F75;
+    background-color: #E1C4CD;
+}
+
+#produtos{
+    text-align: center;
+
+}
+
+#produtos .prod{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #E1C4CD;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0, 0.09);
+    margin: 15px 0;
+    transition: 0.2s ease;
+}
+
+#produtos .prod:hover{
+    box-shadow: 20px 20px 50px rgba(0,0,0, 0.12);
+}
+
+#produtos #poster{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#produtos .prod .descricao{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#produtos .prod .descricao span{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#produtos .prod .descricao h5{
+    padding-top: 7px;
+    font-size: 14px;
+}
+
+#produtos .prodcaixa{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}

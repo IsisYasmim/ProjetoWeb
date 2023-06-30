@@ -1,0 +1,9 @@
+//Cliente de autenticação
+@URL=http://localhost/CC3DeCria/auth
+
+POST {{URL}}/auth.php
+
+{
+    "username": "admin",
+    "password": "1234"
+}
