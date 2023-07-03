@@ -122,12 +122,15 @@ header {
     background-color: #E1C4CD;
 }
 
-#produtos{
+#texto{
     text-align: center;
-
 }
 
-#produtos .prod{
+#produto{
+    display: flex;
+}
+
+#produto .prod{
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
@@ -139,33 +142,79 @@ header {
     transition: 0.2s ease;
 }
 
-#produtos .prod:hover{
+#produto .prod:hover{
     box-shadow: 20px 20px 50px rgba(0,0,0, 0.12);
 }
 
-#produtos #poster{
+#produto #poster{
     width: 100%;
     border-radius: 20px;
 }
 
-#produtos .prod .descricao{
+#produto .prod .descricao{
     text-align: start;
     padding: 10px 0;
 }
 
-#produtos .prod .descricao span{
+#produto .prod .descricao span{
     font-size: 12px;
     font-weight: 500;
 }
 
-#produtos .prod .descricao h5{
+#produto .prod .descricao h5{
     padding-top: 7px;
     font-size: 14px;
 }
 
-#produtos .prodcaixa{
+
+/* Detalhes do Produto */
+#detalhesprod {
     display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    flex-wrap: wrap;
+    margin-top: 20px;
+}
+#detalhesprod .imagemprod img{
+    width: 60%;
+    
+}
+
+#detalhesprod .escritodetalhes{
+    width: 50%;
+    padding-top: 30px;
+}
+#detalhesprod .escritodetalhes h2{
+    font-size: 26px;
+}
+
+#detalhesprod .escritodetalhes h4{
+    padding: 40px 0 20px 0;
+}
+
+#detalhesprod .escritodetalhes input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+#detalhesprod .escritodetalhes input:focus{
+    outline: none;
+}
+
+#detalhesprod .escritodetalhes button{
+    border-style: none;
+    font-size: 17px;
+    border-radius: 4px;
+    padding: 17px;
+    background: #DB7D99;
+    color: white;
+    transition: 80ms;
+}
+#detalhesprod .escritodetalhes button:hover{
+    cursor: pointer;
+    background: #eb9db5;
+}
+
+#detalhesprod .escritodetalhes span{
+    font-weight: 500;
+    line-height: 20px;
 }
