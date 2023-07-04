@@ -54,28 +54,36 @@ inicializarHome = () => {
     })
 }
 
-atualizarCarrinho = () => {
-    var containerCarrinho = document.getElementById('carrinho');
-    containerCarrinho.innerHTML = "";
+inicializarDetalhes = () => {
+    var containerProdutos = document.getElementById('produto');
     produtos.map((val) => {
-        if(val.quantidade > 0){
-            containerCarrinho.innerHTML += `
-            <div class="info-single-checkout">
-                <p style="float:left">Produto: `+val.nome+`</p>
-                <p style="float:right">Quantidade: `+val.quantidade+`</p>
-                <div style="clear:both"></div>
+        containerProdutos.innerHTML += `
+        <article id="produto" class="secao-p1">
+            <div class="prodcaixa">
+                <div class="prod">
+                
+                <a href="detalhesproduto.html"><img id="poster" src="`+ val.img + `"></a>
+                <div class="descricao">
+                    <span>`+ val.categoria + `</span>
+                    <h5>`+ val.nome + `</h5>
+                    <h4>`+ val.preco + `</h4>
+                </div>
+                    <a href="detalhesproduto.html"><img src="recursos/carrinho.png" alt="carrinho de compras" width="20px" height="20px"></a>
+                </div>
+                
             </div>
-            `
-        }
+        </article> 
+        `;
     })
 }
 
+
 var botao = document.getElementById('botaocarrinho');
 
-for(var i = 0; i < botao.lenght; i++){
+for(var i = 0; i < botao.length; i++){
     botao[i].addEventListener("click", function(){
-        let key = this.getAttribute('key');
-        produtos[key].quantidade++;
+        //let key = this.getAttribute('key');
+        produtos[1].quantidade++;
         atualizarCarrinho();
         return false;
     })

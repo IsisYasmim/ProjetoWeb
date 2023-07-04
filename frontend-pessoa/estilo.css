@@ -267,3 +267,38 @@ input[type="password"] {
     align-items: center;
     padding: 10px;
 }
+
+/* Carrinho de compras */
+.cart, .product-list {
+    float: left;
+    width: 50%;
+    padding: 20px;
+  }
+  
+  .cart {
+    background-color: #f2f2f2;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .add-to-cart {
+    border-style: none;
+    font-size: 17px;
+    border-radius: 4px;
+    padding: 17px;
+    background: #DB7D99;
+    color: white;
+    transition: 80ms;
+    
+  }
+  .add-to-cart:hover{
+    cursor: pointer;
+    background: #eb9db5;
+  }
