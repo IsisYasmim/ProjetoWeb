@@ -7,7 +7,8 @@ const produtos = [
         preco: "R$3,00",
         descricao: "ele vai la e quer ficar com ela e ela ouve the smiths e ai ele gosta dela e ai ela sai com ele ai ele fica feliz por um tempo dai ela nao quer mais ai ele fica triste ai ela casa ai ele fica triste ai ele fica de boa e vai procurar emprego sei la",
         categoria: "romance",
-        img: "recursos/500dias.jpg"
+        img: "recursos/500dias.jpg",
+        quantidade: 0
     },
     {
         id: 2,
@@ -15,7 +16,8 @@ const produtos = [
         preco: "R$3,00",
         descricao: "o cara vai la e cria um culto de personalidade baseado em se estapear ai na vdd ele era o outro cara o tempo todo :00 e eh uma crítica ao consumismo eu acho",
         categoria: "ação",
-        img: "recursos/clubeluta.jpg"
+        img: "recursos/clubeluta.jpg",
+        quantidade: 0
     },
     {
         id: 3,
@@ -23,7 +25,8 @@ const produtos = [
         preco: "R$3,00",
         descricao: "o cara se apaixona por um computador kkkkk e ainda é corneado",
         categoria: "romance",
-        img: "recursos/her.jpg"
+        img: "recursos/her.jpg",
+        quantidade: 0
     }
 ]
 
@@ -51,23 +54,29 @@ inicializarHome = () => {
     })
 }
 
+atualizarCarrinho = () => {
+    var containerCarrinho = document.getElementById('carrinho');
+    containerCarrinho.innerHTML = "";
+    produtos.map((val) => {
+        if(val.quantidade > 0){
+            containerCarrinho.innerHTML += `
+            <div class="info-single-checkout">
+                <p style="float:left">Produto: `+val.nome+`</p>
+                <p style="float:right">Quantidade: `+val.quantidade+`</p>
+                <div style="clear:both"></div>
+            </div>
+            `
+        }
+    })
+}
 
+var botao = document.getElementById('botaocarrinho');
 
-/*let produtoEscolhido = produtos[0];
-
-const produtoImgAtual = document.querySelector(".imagemprod");
-const produtoNomeAtual = document.querySelector(".nome");
-const produtoDescricaoAtual = document.querySelector(".descricao");
-const produtoCategoriaAtual = document.querySelector(".categoria");
-
-itensProd.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      //muda o produto escolhido
-    produtoEscolhido = produtos[index];
-      //muda os textos do produto no display
-    produtoNomeAtual.textContent = produtoEscolhido.nome;
-    produtoPrecoAtual.textContent = produtoEscolhido.preco;
-    produtoImgAtual.src = produtoEscolhido.img;
-  
-    });
-  });*/
+for(var i = 0; i < botao.lenght; i++){
+    botao[i].addEventListener("click", function(){
+        let key = this.getAttribute('key');
+        produtos[key].quantidade++;
+        atualizarCarrinho();
+        return false;
+    })
+}
